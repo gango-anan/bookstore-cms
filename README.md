@@ -61,7 +61,7 @@ Galiwango Ananiya
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/gango-anan/bookstore-cms/issues).
 
 ## Show your support
 
@@ -72,4 +72,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/gango-anan/bookstore-cms/blob/project-setup/LICENSE) licensed.
