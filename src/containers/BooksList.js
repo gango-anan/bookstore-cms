@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from '../components/Book';
+import { connect } from 'react-redux';
 
 const BooksList = () => {
   return(
@@ -18,4 +19,4 @@ const BooksList = () => {
   );
 };
 
-export default BooksList;
+export default connect()(BooksList);
