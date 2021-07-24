@@ -1,4 +1,4 @@
-export const createBook = ({ id, title, category }) => ({
+export const createBook = (id, title, category) => ({
   type: 'CREATE_BOOK', payload: { id, title, category },
 });
 
