@@ -15,6 +15,12 @@ const BooksList = (props) => {
   const handleFilterChange = (filter) => {
     alterFilter(filter);
   };
+  const filteredBooks = () => {
+    if (filter === 'All') {
+      return books;
+    }
+    return books.filter((book) => book.category === filter);
+  };
   return (
     <div>
       <table>
@@ -27,7 +33,7 @@ const BooksList = (props) => {
         </thead>
         <tbody>
           {
-          books.map((book) => (
+          filteredBooks().map((book) => (
             <Book
               key={book.id}
               id={book.id}
