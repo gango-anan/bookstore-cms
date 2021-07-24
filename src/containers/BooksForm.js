@@ -10,7 +10,9 @@ const BooksForm = ({ addBook }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addBook(String(Math.floor(Math.random() * 1000000)), book.title, book.category);
+    if (book.title && book.category) {
+      addBook(String(Math.floor(Math.random() * 1000000)), book.title, book.category);
+    }
     setBook({ id: '', title: '', category: '' });
   };
 
