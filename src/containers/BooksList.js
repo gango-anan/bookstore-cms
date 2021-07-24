@@ -26,6 +26,5 @@ BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
 };
 
-const mapStateToProps = (state) => ({ books: state.books });
-
+const mapStateToProps = (state) => state.books;
 export default connect(mapStateToProps)(BooksList);
