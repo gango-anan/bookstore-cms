@@ -26,12 +26,9 @@ const BooksForm = ({ addBook }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="title">
-          ADD NEW BOOK
-          <input id="title" name="title" type="text" placeholder="Add title" onChange={handleChange} value={book.title} />
-        </label>
-      </div>
-      <div>
+        <p>ADD NEW BOOK</p>
+        <input id="title" name="title" type="text" placeholder="Add title" onChange={handleChange} value={book.title} />
+
         <select id="categories" value={book.category} onChange={handleChange}>
           <option value="" disabled>Category</option>
           {
@@ -41,10 +38,10 @@ const BooksForm = ({ addBook }) => {
                 {category}
               </option>
             ))
-        }
+          }
         </select>
       </div>
-      <button type="submit">Add book</button>
+      <div><button type="submit">Add book</button></div>
     </form>
   );
 };
