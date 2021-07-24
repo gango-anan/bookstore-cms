@@ -1,7 +1,7 @@
 const initialState = 'All';
 
 const filterReducer = (state = initialState, action) => {
-  if (action.type === 'CHANGE_BOOK') {
+  if (action.type === 'CHANGE_FILTER') {
     return action.payload;
   }
 

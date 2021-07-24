@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-const CategoryFilter = () => (
+const CategoryFilter = ({ onChange }) => (
   <div>
     <p>FILTER BOOKS</p>
-    <select id="categories" value="All">
-      <option value="All" disabled>All</option>
+    <select id="categories" onChange={(event) => onChange(event.target.value)}>
+      <option value="All">All</option>
       {
         categories
           .map((category) => (
@@ -19,5 +20,9 @@ const CategoryFilter = () => (
     <br />
   </div>
 );
+
+CategoryFilter.propTypes = {
+  onChange: PropTypes.func.isRequired,
+};
 
 export default CategoryFilter;
