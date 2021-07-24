@@ -12,15 +12,14 @@ const initialState = {
 
 const bookReducer = (state = initialState, action) => {
   if (action.type === 'CREATE_BOOK') {
-    return [
-      ...state.books,
-      action,
-    ];
+    return {
+      books: [ ...state.books, action.payload ]
+    };
   }
   if (action.type === 'REMOVE_BOOK') {
-    return state.books.filter((book) => book.id !== action.id);
+    return state.books.filter((book) => book.id !== action.payload.id);
   }
-  return state.books;
+  return state;
 };
 
 export default bookReducer;
