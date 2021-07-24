@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-const BooksForm = () => {
+const BooksForm = ({ books }) => {
   const [book, setBook] = useState({ id: String(Math.floor(Math.random() * 1000000)), title: '', category: '' });
   const handleSubmit = (event) => {
     event.preventDefault();
+
     setBook({ id: '', title: '', category: '' });
   };
 
@@ -44,4 +47,10 @@ const BooksForm = () => {
   );
 };
 
-export default BooksForm;
+BooksForm.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
+};
+
+const mapStateToProps = (state) => state.books;
+
+export default connect(mapStateToProps)(BooksForm);
