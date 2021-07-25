@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import '../styles/BooksList.css';
 
 const BooksList = (props) => {
   const {
@@ -23,6 +24,20 @@ const BooksList = (props) => {
   };
   return (
     <div>
+      <nav className="nav-bar">
+        <div className="menu-bar">
+          <div className="menus">
+            <h1 className="logo">Bookstore CMS</h1>
+            <p className="active-menu-item">BOOKS</p>
+            <p>CATEGORIES</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill avator" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+            </svg>
+          </div>
+        </div>
+      </nav>
       <table>
         <thead>
           <tr>
