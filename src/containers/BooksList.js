@@ -23,7 +23,7 @@ const BooksList = (props) => {
     return books.filter((book) => book.category === filter);
   };
   return (
-    <div>
+    <div className="books">
       <nav className="nav-bar">
         <div className="menu-bar">
           <div className="menus">
@@ -38,16 +38,8 @@ const BooksList = (props) => {
           </div>
         </div>
       </nav>
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
+      <div className="book-card">
+        {
           filteredBooks().map((book) => (
             <Book
               key={book.id}
@@ -58,8 +50,7 @@ const BooksList = (props) => {
             />
           ))
         }
-        </tbody>
-      </table>
+      </div>
       <CategoryFilter onChange={handleFilterChange} />
     </div>
   );

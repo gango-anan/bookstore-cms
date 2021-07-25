@@ -1,6 +1,9 @@
-.nav-bar {
-  --primary-color: rgb(175, 170, 170);
+.books {
+  --primary-color: rgb(211, 206, 206);
   --secondary-color: #fff;
+}
+
+.nav-bar {
   background-color: var(--secondary-color);
   border: 1px solid var(--primary-color);
 }
