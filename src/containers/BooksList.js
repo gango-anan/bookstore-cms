@@ -5,10 +5,9 @@ import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = (props) => {
-  const {
-    books, filter, deleteBook, alterFilter,
-  } = props;
+const BooksList = ({
+  books, filter, deleteBook, alterFilter,
+}) => {
   const handleRemoveBook = (id) => {
     deleteBook(id);
   };
