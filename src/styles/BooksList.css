@@ -1,0 +1,42 @@
+.nav-bar {
+  --primary-color: rgb(175, 170, 170);
+  --secondary-color: #fff;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #0290ff;
+  font-weight: bold;
+}
+
+.menus p {
+  margin-left: 2rem;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+.active-menu-item {
+  font-weight: bold;
+}
+
+.avator {
+  color: #0290ff;
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 50%;
+}
