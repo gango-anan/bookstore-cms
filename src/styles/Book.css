@@ -31,8 +31,8 @@
 }
 
 .bk-title {
-  color: #121212;
-  font-size: 1.5rem;
+  color: var(--black-color);
+  font-size: 1.4rem;
   font-weight: bold;
 }
 

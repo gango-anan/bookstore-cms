@@ -1,11 +1,12 @@
 .App {
-  --primary-color: #888888;
+  --primary-color: #888;
   --black-color: #121212;
   --secondary-color: #fff;
   --blue-color: #0290ff;
   --link-color: #86bce6;
   --border-color: #e8e8e8;
   --bg-color: #fafafa;
+
   background-color: var(--bg-color);
   min-height: 100vh;
   margin: 5%;
