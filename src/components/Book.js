@@ -8,29 +8,36 @@ const Book = ({
   <div className="book">
     <div className="book-details-container">
       <div className="book-details">
-        <p>{category}</p>
-        <p>{title}</p>
-        <p>{id}</p>
+        <p className="bk-category">{category}</p>
+        <p className="bk-title">{title}</p>
+        <p className="bk-author">Author</p>
       </div>
       <div className="edit-content">
         <span>Comments</span>
-        <span><button type="button" onClick={() => delBook(id)}>Remove</button></span>
+        <span className="bk-remove">
+          <button className="bk-remove-btn" type="button" onClick={() => delBook(id)}>Remove</button>
+        </span>
         <span>Edit</span>
       </div>
     </div>
-    <div className="progress-bar">
-      <div className="bar">
-        ...BAR
+    <div className="progress-bar-container">
+      <div className="box">
+        <div className="percent">
+          <svg>
+            <circle cx="70" cy="70" r="35" />
+            <circle cx="70" cy="70" r="35" />
+          </svg>
+        </div>
       </div>
       <div className="percentage-completed">
         <p className="percentage">64%</p>
-        <p className="completed">completed</p>
+        <p className="completed">Completed</p>
       </div>
     </div>
-    <div className="current-chapter">
-      <p>CURRENT CHAPTER</p>
-      <p>Chapter 0</p>
-      <button type="button">UPDATE PROGRESS</button>
+    <div className="current-chapter-container">
+      <p className="current-chapter">CURRENT CHAPTER</p>
+      <p className="chapter">Chapter 20</p>
+      <button type="button" className="btn-update-chapter">UPDATE PROGRESS</button>
     </div>
   </div>
 );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
+import '../styles/Form.css';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -26,24 +27,31 @@ const BooksForm = ({ addBook }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="add-book-form">
       <div>
-        <p>ADD NEW BOOK</p>
-        <input id="title" name="title" type="text" placeholder="Add title" onChange={handleChange} value={book.title} />
-
-        <select id="categories" value={book.category} onChange={handleChange}>
-          <option value="" disabled>Category</option>
-          {
-          categories
-            .map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))
-          }
-        </select>
+        <p className="form-title">ADD NEW BOOK</p>
       </div>
-      <div><button type="submit">Add book</button></div>
+      <div className="input-section">
+        <div className="input-field-container">
+          <input id="title" name="title" type="text" placeholder="Book title" onChange={handleChange} value={book.title} />
+        </div>
+        <div className="select-field-container">
+          <select id="categories" value={book.category} onChange={handleChange}>
+            <option value="" disabled>Category</option>
+            {
+            categories
+              .map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))
+            }
+          </select>
+        </div>
+        <div className="add-book-btn-container">
+          <button type="submit">ADD BOOK</button>
+        </div>
+      </div>
     </form>
   );
 };

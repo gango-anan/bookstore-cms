@@ -29,7 +29,7 @@ const BooksList = (props) => {
           <div className="menus">
             <h1 className="logo">Bookstore CMS</h1>
             <p className="active-menu-item">BOOKS</p>
-            <p>CATEGORIES</p>
+            <CategoryFilter onChange={handleFilterChange} />
           </div>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill avator" viewBox="0 0 16 16">
@@ -51,7 +51,6 @@ const BooksList = (props) => {
           ))
         }
       </div>
-      <CategoryFilter onChange={handleFilterChange} />
     </div>
   );
 };

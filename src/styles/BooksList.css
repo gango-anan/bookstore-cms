@@ -1,18 +1,16 @@
-.books {
-  --primary-color: #f5f6fa;
-  --secondary-color: #fff;
-}
-
 .nav-bar {
   background-color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
+  border-bottom: 4px solid var(--border-color);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 1rem 0;
 }
 
 .menu-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 85%;
   margin: auto;
 }
 
@@ -22,24 +20,27 @@
   justify-content: space-between;
 }
 
-.logo {
-  color: #0290ff;
-  font-weight: bold;
+.menus > * {
+  margin-right: 2rem;
+  cursor: pointer;
 }
 
-.menus p {
-  margin-left: 2rem;
-  font-size: 0.8rem;
-  color: var(--primary-color);
+.logo {
+  color: var(--blue-color);
+  font-weight: bold;
 }
 
 .active-menu-item {
-  font-weight: bold;
+  color: var(--black-color);
+}
+
+.menu-item-categories {
+  color: var(--primary-color);
 }
 
 .avator {
-  color: #0290ff;
-  border: 1px solid var(--primary-color);
+  color: var(--blue-color);
+  border: 1px solid var(--border-color);
   padding: 10px;
   border-radius: 50%;
 }

@@ -1,10 +1,119 @@
 .book {
   background-color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
-  width: 90%;
-  margin: 2rem auto;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 85%;
+  margin: 1.5rem auto;
   display: flex;
-  flex: 1;
-  justify-content: space-between;
   align-items: center;
+}
+
+.book > * {
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+
+.book-details-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.book-details {
+  line-height: 0.3rem;
+}
+
+.bk-category {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.bk-title {
+  color: #121212;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.bk-author {
+  color: var(--link-color);
+}
+
+.edit-content {
+  color: var(--link-color);
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.bk-remove {
+  padding: 0 0.5rem;
+  margin: 0 1rem;
+  border-left: 1.5px solid var(--border-color);
+  border-right: 1.5px solid var(--border-color);
+}
+
+.bk-remove-btn {
+  border: 0;
+  background: none;
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: translate(0, 0) rotate(-90deg);
+}
+
+.percent svg circle {
+  width: 150px;
+  height: 150px;
+  fill: none;
+  stroke-width: 5;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+}
+
+.percent svg circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #f3f3f3;
+}
+
+.percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(220 - (220 * 0.64));
+  stroke: #03a9f4;
+}
+
+.percentage-completed {
+  line-height: 0.3rem;
+  border-right: 2px solid var(--border-color);
+  padding-right: 3rem;
+}
+
+.percentage {
+  font-size: 2rem;
+}
+
+.completed {
+  color: var(--primary-color);
+}
+
+.current-chapter {
+  color: var(--primary-color);
+}
+
+.btn-update-chapter {
+  border: none;
+  background-color: var(--blue-color);
+  color: var(--secondary-color);
+  padding: 0.6rem 2rem;
+  border-radius: 5px;
 }
