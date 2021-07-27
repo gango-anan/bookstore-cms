@@ -6,10 +6,9 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import '../styles/BooksList.css';
 
-const BooksList = (props) => {
-  const {
-    books, filter, deleteBook, alterFilter,
-  } = props;
+const BooksList = ({
+  books, filter, deleteBook, alterFilter,
+}) => {
   const handleRemoveBook = (id) => {
     deleteBook(id);
   };
