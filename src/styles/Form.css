@@ -1,0 +1,43 @@
+.add-book-form {
+  width: 85%;
+  margin: 2rem auto;
+  border-top: 2px solid #eaecf1;
+}
+
+.form-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field-container input {
+  min-width: 30vw;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.7rem;
+  font-size: 14px;
+}
+
+.select-field-container select {
+  min-width: 20vw;
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: 2px solid var(--border-color);
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+.add-book-btn-container button {
+  min-width: 10vw;
+  border: none;
+  background-color: var(--blue-color);
+  color: var(--secondary-color);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+}
