@@ -1,0 +1,46 @@
+.nav-bar {
+  background-color: var(--secondary-color);
+  border-bottom: 4px solid var(--border-color);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 1rem 0;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menus > * {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.logo {
+  color: var(--blue-color);
+  font-weight: bold;
+}
+
+.active-menu-item {
+  color: var(--black-color);
+}
+
+.menu-item-categories {
+  color: var(--primary-color);
+}
+
+.avator {
+  color: var(--blue-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 50%;
+}
